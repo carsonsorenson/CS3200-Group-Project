@@ -15,8 +15,20 @@ export default class QuizScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-              <Text style={styles.welcome}>
-                Welcome to The Home Screen
+              <Text style={styles.question}>
+                Moon or Stars?
+              </Text>
+              <Text style={styles.question}>
+                Left or Right?
+              </Text>
+              <Text style={styles.question}>
+                Windows or Mac?
+              </Text>
+              <Text style={styles.question}>
+                Vim?
+              </Text>
+              <Text style={styles.question}>
+                What animal would you bring with you to Hogwarts?
               </Text>
             </View>
         );
@@ -30,23 +42,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
+  question: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  touchableButton: {
-    backgroundColor: 'lightblue',
-    padding: 10,
-    margin: 10,
-    borderRadius: 20
-  },
-  touchableButtonText: {
-    fontSize: 20
-  }
 });
