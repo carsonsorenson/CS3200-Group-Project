@@ -7,6 +7,7 @@ import {
 } from 'react-navigation';
 
 import QuizScreen from '../screens/QuizScreen';
+import GryffindorScreen from '../screens/Gryffindor';
 
 // Main navigation class to handle all routing 
 let NavigationService = class NavigationService {
@@ -40,6 +41,7 @@ export default navigationService;
 const Root = createStackNavigator(
     {
         Quiz: QuizScreen,
+        Gryffindor: GryffindorScreen
     },
     {
         initialRouteName: 'Quiz'
