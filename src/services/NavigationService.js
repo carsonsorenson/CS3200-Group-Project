@@ -8,6 +8,9 @@ import {
 
 import QuizScreen from '../screens/QuizScreen';
 import GryffindorScreen from '../screens/Gryffindor';
+import HufflepuffScreen from '../screens/Hufflepuff';
+import RavenclawScreen from '../screens/Ravenclaw';
+import SlytherinScreen from '../screens/Slytherin';
 
 // Main navigation class to handle all routing 
 let NavigationService = class NavigationService {
@@ -41,7 +44,10 @@ export default navigationService;
 const Root = createStackNavigator(
     {
         Quiz: QuizScreen,
-        Gryffindor: GryffindorScreen
+        Gryffindor: GryffindorScreen,
+        Hufflepuff: HufflepuffScreen,
+        Ravenclaw: RavenclawScreen,
+        Slytherin: SlytherinScreen,
     },
     {
         initialRouteName: 'Quiz'

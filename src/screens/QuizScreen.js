@@ -10,6 +10,8 @@ import {
   View
 } from 'react-native';
 
+import HarryPotterService from '../services/harry.potter.service';
+
 export default class QuizScreen extends Component {
     constructor(props) {
         super(props);
@@ -20,7 +22,22 @@ export default class QuizScreen extends Component {
           q3: "Windows",
           q4: "Yes",
           q5: "Owl",
+          house: ""
         }
+    }
+
+    componentDidMount() {
+        this._getHouse();
+    }
+
+    _getHouse() {
+        HarryPotterService.getSortingHouse()
+        .then(results => {
+            this.setState({ house: results });
+        })
+        .catch(error => {
+            console.log('Something went wrong!');
+        })
     }
 
     render() {
@@ -94,7 +111,7 @@ export default class QuizScreen extends Component {
               <Text style = {styles.selectedAnswer}>{this.state.q5}</Text>
               <TouchableOpacity
                 style={styles.submitButton}
-                onPress={() => { console.log(this.props); this.props.navigation.navigate('Gryffindor') }}
+                onPress={() => { console.log(this.state.house); console.log(this.props); this.props.navigation.navigate(this.state.house) }}
 							>
 								<Text style={{alignSelf: 'center', fontSize: 50, margin: 10}}>Submit!</Text>
 							</TouchableOpacity>
