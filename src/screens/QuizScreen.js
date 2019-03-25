@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  Image,
   View
 } from 'react-native';
 
@@ -15,6 +16,10 @@ export default class QuizScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
+              <Image
+                source={require('../resources/hogwarts.jpg')}
+                style={{height: 100, width: 100, backgroundColor: '#F5FCFF'}}
+              />
               <Text style={styles.question}>
                 Moon or Stars?
               </Text>
