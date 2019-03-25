@@ -9,6 +9,10 @@ import {
 } from 'react-native';
 
 export default class GryffindorScreen extends Component {
+    static navigationOptions = {
+        headerLeft: null
+    }
+
     render() {
         return (
             <View style={styles.container}>
