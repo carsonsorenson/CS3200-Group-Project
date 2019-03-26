@@ -13,9 +13,11 @@ export default class SpellsScreen extends Component {
         return (
             <View style={styles.container}>
               <Image
-                source={require('../resources/wand.jpg')}
-                style={{height: 100, width: 100, backgroundColor: '#F5FCFF', alignSelf: 'center', margin: 5}}
+                source={require('../resources/wand.png')}
+                style={{height: 70, alignItems: 'flex-start'}}
+                resizeMode="contain"
               />
+              <Text>Populate spells here</Text>
             </View>
         );
     }
