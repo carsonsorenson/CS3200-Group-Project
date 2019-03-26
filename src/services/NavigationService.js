@@ -17,7 +17,6 @@ import SpellsScreen from '../screens/Spells';
 // Main navigation class to handle all routing 
 let NavigationService = class NavigationService {
     constructor() {
-      console.log(this);
     }
 
     getTopNavigator() {
@@ -48,7 +47,7 @@ const GryffindorNav = createBottomTabNavigator(
     {
         Gryffindor: GryffindorScreen,
         Spells: SpellsScreen,
-    }
+    },
 )
 
 const RavenclawNav = createBottomTabNavigator(
