@@ -111,7 +111,7 @@ export default class QuizScreen extends Component {
               <Text style = {styles.selectedAnswer}>{this.state.q5}</Text>
               <TouchableOpacity
                 style={styles.submitButton}
-                onPress={() => { console.log(this.state.house); console.log(this.props); this.props.navigation.navigate(this.state.house) }}
+                onPress={() => { this.props.navigation.navigate(this.state.house) }}
 							>
 								<Text style={{alignSelf: 'center', fontSize: 50, margin: 10}}>Submit!</Text>
 							</TouchableOpacity>
@@ -145,6 +145,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'black',
     marginTop: 10,
+    marginBottom: 50,
     alignSelf: 'center',
     borderRadius: 30,
   }
