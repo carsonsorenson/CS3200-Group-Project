@@ -3,6 +3,7 @@ import React from 'react';
 import {
     createAppContainer,
     createStackNavigator,
+    createBottomTabNavigator,
     NavigationActions
 } from 'react-navigation';
 
@@ -16,6 +17,7 @@ import SpellsScreen from '../screens/Spells';
 // Main navigation class to handle all routing 
 let NavigationService = class NavigationService {
     constructor() {
+      console.log(this);
     }
 
     getTopNavigator() {
@@ -42,14 +44,41 @@ let NavigationService = class NavigationService {
 const navigationService = new NavigationService();
 export default navigationService;
 
+const GryffindorNav = createBottomTabNavigator(
+    {
+        Gryffindor: GryffindorScreen,
+        Spells: SpellsScreen,
+    }
+)
+
+const RavenclawNav = createBottomTabNavigator(
+    {
+        Ravenclaw: RavenclawScreen,
+        Spells: SpellsScreen,
+    }
+)
+
+const HufflepuffNav = createBottomTabNavigator(
+    {
+        Hufflepuff: HufflepuffScreen,
+        Spells: SpellsScreen,
+    }
+)
+
+const SlytherinNav = createBottomTabNavigator(
+    {
+        Slytherin: SlytherinScreen,
+        Spells: SpellsScreen,
+    }
+)
+
 const Root = createStackNavigator(
     {
         Quiz: QuizScreen,
-        Gryffindor: GryffindorScreen,
-        Hufflepuff: HufflepuffScreen,
-        Ravenclaw: RavenclawScreen,
-        Slytherin: SlytherinScreen,
-        Spells: SpellsScreen,
+        Gryffindor: GryffindorNav,
+        Ravenclaw: RavenclawNav,
+        Hufflepuff: HufflepuffNav,
+        Slytherin: SlytherinNav,
     },
     {
         initialRouteName: 'Quiz'
