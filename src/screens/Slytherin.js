@@ -7,6 +7,7 @@ import {
     Image,
     View
 } from 'react-native';
+import CharacterList from '../components/CharacterList'
 
 export default class SlytherinScreen extends Component {
     constructor(props) {
@@ -29,8 +30,10 @@ export default class SlytherinScreen extends Component {
                   source={require('../resources/s.png')}
                   style={{height: 100, width: 100, alignSelf: 'center', margin: 5}}
                 />
-                <Text style={styles.houseName}>{this.state.house}</Text>
               </View>
+              <CharacterList
+                house={this.state.house}
+              />
             </View>
         );
     }

@@ -7,6 +7,7 @@ import {
     Image,
     View
 } from 'react-native';
+import CharacterList from '../components/CharacterList'
 
 export default class RavenclawScreen extends Component {
     constructor(props) {
@@ -31,7 +32,9 @@ export default class RavenclawScreen extends Component {
                 />
                 <Text style={styles.houseName}>{this.state.house}</Text>
               </View>
-              <Text>Populate characters from Ravenclaw here</Text>
+              <CharacterList
+                house={this.state.house}
+              />
             </View>
         );
     }
