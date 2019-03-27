@@ -6,7 +6,7 @@ import {
     TouchableOpacity,
     Image,
     View,
-    Flatlist
+    FlatList
 } from 'react-native';
 import HarryPotterService from '../services/harry.potter.service'
 import harryPotterService from '../services/harry.potter.service';
