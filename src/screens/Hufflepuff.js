@@ -32,6 +32,7 @@ export default class HufflepuffScreen extends Component {
                 />
                 <Text style={styles.houseName}>{this.state.house}</Text>
               </View>
+              <Text style={styles.characterLabel}>Get to know the people in your house!</Text>
               <CharacterList
                 house={this.state.house}
               />
@@ -45,6 +46,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'stretch',
+        backgroundColor: '#F1B72A',
     },
     header: {
         backgroundColor: '#F1B72A',
@@ -57,5 +59,14 @@ const styles = StyleSheet.create({
       textShadowOffset: {width: -1, height: 1},
       textShadowRadius: 5,
       alignSelf: 'center'
-    }
+    },
+    characterLabel: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: 'black',
+      textShadowColor: 'rgba(0, 0, 0, 0.75)',
+      textShadowOffset: {width: -1, height: 1},
+      textShadowRadius: 5,
+      alignSelf: 'center'
+    },
 });

@@ -32,6 +32,7 @@ export default class RavenclawScreen extends Component {
                 />
                 <Text style={styles.houseName}>{this.state.house}</Text>
               </View>
+              <Text style={styles.characterLabel}>Get to know the people in your house!</Text>
               <CharacterList
                 house={this.state.house}
               />
@@ -45,6 +46,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'stretch',
+        backgroundColor: '#084F7D',
     },
     header: {
         backgroundColor: '#084F7D',
@@ -57,5 +59,14 @@ const styles = StyleSheet.create({
       textShadowOffset: {width: -1, height: 1},
       textShadowRadius: 10,
       alignSelf: 'center'
-    }
+    },
+    characterLabel: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: '#AB8020',
+      textShadowColor: 'rgba(0, 0, 0, 0.75)',
+      textShadowOffset: {width: -1, height: 1},
+      textShadowRadius: 10,
+      alignSelf: 'center'
+    },
 });

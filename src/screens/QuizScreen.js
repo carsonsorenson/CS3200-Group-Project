@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F8F8F8',
   },
   group: {
     borderWidth: 2,
@@ -160,12 +160,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   submitButton: {
-    backgroundColor: '#F5FCFF',
-    borderWidth: 2,
+    backgroundColor: '#F0F0F0',
+    borderWidth: 1,
     borderColor: 'black',
     marginTop: 10,
     marginBottom: 50,
     alignSelf: 'center',
-    borderRadius: 30,
+    shadowOffset:{  width: 1,  height: 1,  },
+    shadowColor: 'black',
+    shadowOpacity: 1.0,
   }
 });
