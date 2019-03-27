@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
     Platform,
     StyleSheet,
-    Text,
     TouchableOpacity,
     Image,
     View,
     FlatList
 } from 'react-native';
-import HarryPotterService from '../services/harry.potter.service'
+import {Card, CardItem, Text} from 'native-base';
 import harryPotterService from '../services/harry.potter.service';
 
-export default class SpellsScreen extends Component {
+export default class SpellsScreen extends PureComponent {
     
     constructor(props) {
         super(props);
@@ -42,9 +41,7 @@ export default class SpellsScreen extends Component {
                 style={{height: 70, alignItems: 'flex-start'}}
                 resizeMode="contain"
               />
-                <View>
-                    {this.renderSpells()}
-                </View>
+            {this.renderSpells()}
             </View>
         );
     }
@@ -61,9 +58,23 @@ export default class SpellsScreen extends Component {
 
     _renderItem = ({ item }) => {
         return (
-            <Text>
-            {item.getSpell()}
-            </Text>
+            <Card>
+                <CardItem>
+                    <Text>
+                        Spell: {item.getSpell()}
+                    </Text>
+                </CardItem>
+                <CardItem>
+                    <Text>
+                        Effect: {item.getEffect()}
+                    </Text>
+                </CardItem>
+                <CardItem>
+                    <Text>
+                        Type: {item.getType()}
+                    </Text>
+                </CardItem>
+            </Card>
         );
     }
 
